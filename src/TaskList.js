@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import NewSourceForm from './NewSourceForm'
 import Task from './Task'
+import './TaskList.scss';
 
 class TaskList extends Component {
     constructor(props) {
@@ -27,15 +28,10 @@ class TaskList extends Component {
         />);
 
         return(
-        <div>
-            <NewSourceForm createTask={this.create}/>
-            <Task 
-            inputText="ala ma kota"
-            inputCryptogram="a0:r;a1:p;a2::;a3:z;l0:o;m0:u;k0:,;o0:t;t0:f; 0:a; 1:b; 2:c;"
-            cipherType="homophonic"
-            key = "test_key"
-            id = "test_key"
-            />
+        <div className="TaskList">
+            <div className="row">
+                <NewSourceForm createTask={this.create}/>
+            </div>
             {tasks}
         </div>
         );

@@ -34,18 +34,20 @@ class Task extends Component {
 
 
     render(){
-        let newTask = new Homophonic(this.props.inputText, this.props.inputCryptogram);
+        let newTask = new Homophonic(this.props.inputText);
         let decyphered = newTask.decypher();
-        this.saveFile(decyphered, newTask);
 
         return(
-        <div>
-            <p>Text: {this.props.inputText}</p>
-            <p>Cryptogram: "{this.props.inputCryptogram}"</p>
-            <p>CipherType: {this.props.cipherType}</p>
-            <p>Coded message: {newTask.cyphered}</p>
-            <p>Decoded message for validity check: {decyphered}</p>
-            <hr></hr>
+        <div className="row">
+            <div className="col-md-6">
+                <p>Text: {this.props.inputText}</p>
+                {/* <p>Cryptogram: "{this.props.inputCryptogram}"</p> */}
+                {/* <p>CipherType: {this.props.cipherType}</p> */}
+                <p>Coded message: {newTask.cyphered}</p>
+                <p>Decoded message for validity check: {decyphered}</p>
+                <button onClick={(decyphered,newTask) => this.saveFile(newTask,decyphered)}>Save to File!</button>
+                <hr></hr>
+            </div>
         </div>
         );
     }

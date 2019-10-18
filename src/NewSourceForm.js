@@ -4,7 +4,7 @@ import uuid from 'uuid/v4';
 class NewSourceForm extends Component {
     constructor(props) {
         super(props);
-        this.state = { inputText: '', inputCryptogram: '', cipherType: '', inputFile: '', inputCryptogram: '' };
+        this.state = { inputText: '', inputCryptogram: '', cipherType: '', inputFile: '', cryptogramFile: '' };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,7 +32,7 @@ class NewSourceForm extends Component {
             newTask = {...this.state, key: newId, id: newId};
 
         this.props.createTask(newTask);
-        this.setState({ inputText: '', inputCryptogram: '', inputFile: '', inputCryptogram: ''});
+        this.setState({ inputText: '', inputCryptogram: '', inputFile: '', cryptogramFile: ''});
     }
 
     handleTextFile(evt){
@@ -62,48 +62,75 @@ class NewSourceForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} className="newTaskForm col-md-6 col-md-offset-5">
 
-                <label htmlFor="inputText">Text: </label>
-                <input
-                    type="text"
-                    placeholder="inputText"
-                    id="inputText"
-                    name="inputText"
-                    value={this.state.inputText.toLowerCase()}
-                    onChange={this.handleChange} />
+                <div className="form-row">
+                    <label htmlFor="inputText" className="col-sm-2 col-form-label col-form-label">Text: </label>
+                        <div class="col-sm-10">
+                            <input
+                                type="text"
+                                placeholder="inputText"
+                                id="inputText"
+                                name="inputText"
+                                value={this.state.inputText.toLowerCase()}
+                                onChange={this.handleChange}
+                                className="form-control" />
+                        </div>
+                    </div>
 
-                <label htmlFor="inputFile">File with text: </label>
-                <input
-                    type="file"
-                    name="inputFile" 
-                    onChange={this.handleTextFile} 
-                    value={this.state.inputFile}/>
+                    <div className="form-row">
+                        <label htmlFor="inputFile" className="col-sm-2 col-form-label col-form-label">File with text: </label>
+                            <div class="col-sm-10">
+                                <input
+                                    type="file"
+                                    name="inputFile" 
+                                    onChange={this.handleTextFile} 
+                                    value={this.state.inputFile}
+                                    className="custom-file"/>
+                            </div>
+                    </div>
+                    
+                    <div className="form-row">
+                        <label htmlFor="inputCryptogram" className="col-sm-2 col-form-label col-form-label">Cryptogram: </label>
+                            <div class="col-sm-10">
+                                <input
+                                    type="text"
+                                    placeholder="inputCryptogram"
+                                    id="inputCryptogram"
+                                    name="inputCryptogram"
+                                    value={this.state.inputCryptogram.toLowerCase()}
+                                    onChange={this.handleChange} 
+                                    className="form-control"
+                                    disabled/>
+                            </div>
+                    </div>
 
-                <label htmlFor="inputCryptogram">Cryptogram: </label>
-                <input
-                    type="text"
-                    placeholder="inputCryptogram"
-                    id="inputCryptogram"
-                    name="inputCryptogram"
-                    value={this.state.inputCryptogram.toLowerCase()}
-                    onChange={this.handleChange} 
-                    />
+                    <div className="form-row">
+                        <label htmlFor="cryptogramFile" className="col-sm-2 col-form-label col-form-label">File with cryptogram: </label>
+                            <div class="col-sm-10">
+                                <input
+                                    type="file"
+                                    name="cryptogramFile" 
+                                    onChange={this.handleCryptoFile}
+                                    value={this.state.cryptogramFile}
+                                    className="custom-file"
+                                    disabled/>
+                            </div>
+                    </div>
 
-                <label htmlFor="cryptogramFile">File with cryptogram: </label>
-                <input
-                    type="file"
-                    name="cryptogramFile" 
-                    onChange={this.handleCryptoFile}
-                    value={this.state.cryptogramFile}
-                    />
+                    <div className="form-row">
+                            <label htmlFor="cipherType" className="col-sm-2 col-form-label col-form-label">Cypher type: </label>
+                        <div class="col-sm-1">
+                            <select value={this.state.cipherType} className="custom-select mr-sm-2" onChange={this.handleChange} name="cipherType">
+                                <option value=""></option>
+                                <option value="homophonic">?</option>
+                            </select>
+                        </div>
+                    </div>
 
-                <select value={this.state.cipherType} onChange={this.handleChange} name="cipherType">
-                    <option value=""></option>
-                    <option value="homophonic">homophonic</option>
-                </select>
-
-                <button>Submit</button>
+                    <div className="form-row">
+                        <button>Submit</button>
+                    </div>
             </form>
         );
     }
