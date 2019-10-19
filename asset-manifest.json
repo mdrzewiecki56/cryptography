@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cryptography/static/css/main.a8a9ecc4.chunk.css",
+    "main.js": "/cryptography/static/js/main.892c8173.chunk.js",
+    "main.js.map": "/cryptography/static/js/main.892c8173.chunk.js.map",
+    "runtime-main.js": "/cryptography/static/js/runtime-main.b83ce7d1.js",
+    "runtime-main.js.map": "/cryptography/static/js/runtime-main.b83ce7d1.js.map",
+    "static/css/2.0624914a.chunk.css": "/cryptography/static/css/2.0624914a.chunk.css",
+    "static/js/2.f83275af.chunk.js": "/cryptography/static/js/2.f83275af.chunk.js",
+    "static/js/2.f83275af.chunk.js.map": "/cryptography/static/js/2.f83275af.chunk.js.map",
+    "index.html": "/cryptography/index.html",
+    "precache-manifest.ef1f720c1bd2395ed8bfdcc265fd17d3.js": "/cryptography/precache-manifest.ef1f720c1bd2395ed8bfdcc265fd17d3.js",
+    "service-worker.js": "/cryptography/service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "/cryptography/static/css/2.0624914a.chunk.css.map",
+    "static/css/main.a8a9ecc4.chunk.css.map": "/cryptography/static/css/main.a8a9ecc4.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b83ce7d1.js",
+    "static/css/2.0624914a.chunk.css",
+    "static/js/2.f83275af.chunk.js",
+    "static/css/main.a8a9ecc4.chunk.css",
+    "static/js/main.892c8173.chunk.js"
+  ]
+}
