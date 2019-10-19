@@ -7,7 +7,7 @@ class App extends Component {
     render(){
         return (
             <div className="App text-center container-fluid">
-                <h1>Cypher.io</h1>
+                <h1>Cypherio</h1>
                 <TaskList />
             </div>
         );

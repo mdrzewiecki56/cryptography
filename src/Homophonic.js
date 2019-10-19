@@ -41,25 +41,24 @@ class Homophonic {
     
     cypher(){
         var output = Array.from(this.input);
-        for (let i = 0;i<output.length;i++){
+        for (let i = 0;i<output.length;i++)
             output[i]=this.swap(output[i]);
-        }
 
         return output.join("");
     }
 
     decypher(){
         let decyphered = Array.from(this.cyphered);
-        for(let i = 0;i<this.cyphered.length;i++){
+        for(let i = 0;i<this.cyphered.length;i++)
             decyphered[i] = this.reswap(decyphered[i]);
-            console.log(decyphered);
-        }
 
         return decyphered.join("");
     }
 
     swap(char){
         let pack = this.alphabet.get(char);
+        if (pack === undefined)
+            return '?';
         let postition = Math.floor(Math.random() * pack.length);
 
         return pack.charAt(postition);
@@ -67,6 +66,9 @@ class Homophonic {
 
     reswap(char){
         let codedLetter;
+        if (char === undefined || char === 'E')
+            return '?';
+
         for (let [key, value] of this.alphabet.entries()) {
             if (value.includes(char))
                 codedLetter = key;    

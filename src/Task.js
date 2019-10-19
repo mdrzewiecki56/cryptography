@@ -39,13 +39,13 @@ class Task extends Component {
 
         return(
         <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 offset-md-3 task">
                 <p>Text: {this.props.inputText}</p>
                 {/* <p>Cryptogram: "{this.props.inputCryptogram}"</p> */}
                 {/* <p>CipherType: {this.props.cipherType}</p> */}
                 <p>Coded message: {newTask.cyphered}</p>
                 <p>Decoded message for validity check: {decyphered}</p>
-                <button onClick={(decyphered,newTask) => this.saveFile(newTask,decyphered)}>Save to File!</button>
+                <button onClick={(decyphered,newTask) => this.saveFile(newTask,decyphered)} className="btn btn-light">Save to File!</button>
                 <hr></hr>
             </div>
         </div>

@@ -16,7 +16,7 @@ class NewSourceForm extends Component {
         const target = evt.target;
         const value = target.value;
         const name = target.name;
-    
+
         this.setState({
           [name]: value
         });
@@ -62,11 +62,11 @@ class NewSourceForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} className="newTaskForm col-md-6 col-md-offset-5">
+            <form onSubmit={this.handleSubmit} className="newTaskForm col-md-6 offset-md-3">
 
                 <div className="form-row">
                     <label htmlFor="inputText" className="col-sm-2 col-form-label col-form-label">Text: </label>
-                        <div class="col-sm-10">
+                        <div className="col-sm-10">
                             <input
                                 type="text"
                                 placeholder="inputText"
@@ -80,7 +80,7 @@ class NewSourceForm extends Component {
 
                     <div className="form-row">
                         <label htmlFor="inputFile" className="col-sm-2 col-form-label col-form-label">File with text: </label>
-                            <div class="col-sm-10">
+                            <div className="col-sm-10">
                                 <input
                                     type="file"
                                     name="inputFile" 
@@ -92,7 +92,7 @@ class NewSourceForm extends Component {
                     
                     <div className="form-row">
                         <label htmlFor="inputCryptogram" className="col-sm-2 col-form-label col-form-label">Cryptogram: </label>
-                            <div class="col-sm-10">
+                            <div className="col-sm-10">
                                 <input
                                     type="text"
                                     placeholder="inputCryptogram"
@@ -107,7 +107,7 @@ class NewSourceForm extends Component {
 
                     <div className="form-row">
                         <label htmlFor="cryptogramFile" className="col-sm-2 col-form-label col-form-label">File with cryptogram: </label>
-                            <div class="col-sm-10">
+                            <div className="col-sm-10">
                                 <input
                                     type="file"
                                     name="cryptogramFile" 
@@ -120,7 +120,7 @@ class NewSourceForm extends Component {
 
                     <div className="form-row">
                             <label htmlFor="cipherType" className="col-sm-2 col-form-label col-form-label">Cypher type: </label>
-                        <div class="col-sm-1">
+                        <div className="col-sm-1">
                             <select value={this.state.cipherType} className="custom-select mr-sm-2" onChange={this.handleChange} name="cipherType">
                                 <option value=""></option>
                                 <option value="homophonic">?</option>
@@ -129,7 +129,9 @@ class NewSourceForm extends Component {
                     </div>
 
                     <div className="form-row">
-                        <button>Submit</button>
+                        <div className="col-sm-12">
+                            <button className="btn btn-light">Submit</button>
+                        </div>
                     </div>
             </form>
         );
