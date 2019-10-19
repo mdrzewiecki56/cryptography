@@ -8,13 +8,13 @@ class Task extends Component {
         this.saveFile = this.saveFile.bind(this);
     }
 
-    saveFile(decypheredText,task){
+    saveFile(decyphered,cyphered){
         var fileContents =             
         "Text:" + this.props.inputText +
-        "\nCryptogram:" + this.props.inputCryptogram +
-        "\nCipherType:" + this.props.cipherType +
-        "\nCoded message:" + task.cyphered +
-        "\nDecoded message for validity check:" + decypheredText;
+        //"\nCryptogram:" + this.props.inputCryptogram +
+        //"\nCipherType:" + this.props.cipherType +
+        "\nCoded message:" + cyphered +
+        "\nDecoded message for validity check:" + decyphered;
         var filename = "output.txt";
         var filetype = "text/plain";
 
@@ -36,6 +36,7 @@ class Task extends Component {
     render(){
         let newTask = new Homophonic(this.props.inputText);
         let decyphered = newTask.decypher();
+        let cyphered = newTask.cyphered;
 
         return(
         <div className="row">
@@ -43,9 +44,9 @@ class Task extends Component {
                 <p>Text: {this.props.inputText}</p>
                 {/* <p>Cryptogram: "{this.props.inputCryptogram}"</p> */}
                 {/* <p>CipherType: {this.props.cipherType}</p> */}
-                <p>Coded message: {newTask.cyphered}</p>
+                <p>Coded message: {cyphered}</p>
                 <p>Decoded message for validity check: {decyphered}</p>
-                <button onClick={(decyphered,newTask) => this.saveFile(decyphered,newTask)} className="btn btn-light">Save to File!</button>
+                <button onClick={() => this.saveFile(decyphered,cyphered)} className="btn btn-light">Save to File!</button>
                 <hr></hr>
             </div>
         </div>
