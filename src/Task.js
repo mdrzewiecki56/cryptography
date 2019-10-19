@@ -45,7 +45,7 @@ class Task extends Component {
                 {/* <p>CipherType: {this.props.cipherType}</p> */}
                 <p>Coded message: {newTask.cyphered}</p>
                 <p>Decoded message for validity check: {decyphered}</p>
-                <button onClick={(decyphered,newTask) => this.saveFile(newTask,decyphered)} className="btn btn-light">Save to File!</button>
+                <button onClick={(decyphered,newTask) => this.saveFile(decyphered,newTask)} className="btn btn-light">Save to File!</button>
                 <hr></hr>
             </div>
         </div>

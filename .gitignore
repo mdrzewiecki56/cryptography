@@ -86,3 +86,32 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+build/asset-manifest.json
+build/precache-manifest.97fdbf2a744e959317d613403d57d7ef.js
+build/precache-manifest.ef1f720c1bd2395ed8bfdcc265fd17d3.js
+build/static/css/2.0624914a.chunk.css
+build/static/css/main.a8a9ecc4.chunk.css
+build/static/css/main.a8a9ecc4.chunk.css.map
+build/static/css/main.f26d7127.chunk.css
+build/static/css/main.f26d7127.chunk.css.map
+build/static/js/2.f83275af.chunk.js
+build/static/js/main.2dd9cd39.chunk.js
+build/static/js/main.2dd9cd39.chunk.js.map
+build/static/js/main.892c8173.chunk.js
+build/static/js/main.892c8173.chunk.js.map
+build/static/js/runtime-main.b83ce7d1.js
+build/asset-manifest.json
+build/precache-manifest.97fdbf2a744e959317d613403d57d7ef.js
+build/static/css/2.0624914a.chunk.css
+build/static/css/main.f26d7127.chunk.css
+build/static/css/main.f26d7127.chunk.css.map
+build/static/js/2.f83275af.chunk.js
+build/static/js/main.2dd9cd39.chunk.js
+build/static/js/main.2dd9cd39.chunk.js.map
+build/static/js/runtime-main.b83ce7d1.js
+build/static/js/runtime-main.b83ce7d1.js
+build/static/js/main.2dd9cd39.chunk.js.map
+build/static/js/main.2dd9cd39.chunk.js
+build/static/js/2.f83275af.chunk.js
+build/static/css/main.f26d7127.chunk.css.map
+build/static/css/main.f26d7127.chunk.css
